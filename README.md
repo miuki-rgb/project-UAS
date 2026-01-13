@@ -1,38 +1,50 @@
-# Mobile Point of Sales (POS) System
+# BusKet
 
-Aplikasi kasir berbasis mobile yang dirancang untuk efisiensi transaksi, manajemen inventaris, dan analisis bisnis dalam genggaman. Dibangun menggunakan bahasa pemrograman Dart dan Framework Flutter, aplikasi ini menawarkan performa tinggi dan antarmuka pengguna yang responsif.
+**Solusi Terintegrasi Manajemen dan Pemesanan Tiket Bus Antar Kota**
 
-Sistem ini mendukung fitur multi-akun, memungkinkan privasi data produk yang terisolasi antar pengguna pada satu perangkat atau sistem yang sama.
+BusKet adalah platform komprehensif yang dirancang untuk memodernisasi industri transportasi bus. Platform ini menjembatani kesenjangan antara operator bus dan penumpang melalui dua komponen utama: Dashboard Admin berbasis Web untuk manajemen operasional yang efisien, dan Aplikasi Mobile untuk pengalaman pemesanan tiket yang mudah bagi penumpang.
+
+---
+
+## Tentang Proyek
+
+Industri transportasi bus seringkali menghadapi tantangan dalam manajemen inventaris tiket secara real-time dan kemudahan akses bagi penumpang. BusKet hadir untuk menyelesaikan masalah tersebut dengan menyediakan:
+
+* **Sentralisasi Data:** Pengelolaan jadwal, armada, dan manifest penumpang dalam satu database terpusat.
+* **Aksesibilitas:** Memungkinkan penumpang memesan tiket kapan saja dan di mana saja tanpa harus datang ke terminal/agen.
+* **Transparansi:** Informasi ketersediaan kursi dan harga yang transparan secara real-time.
+
+---
+
+## Arsitektur Sistem
+
+Proyek ini dibagi menjadi dua repositori atau modul utama:
+
+1.  **BusKet Admin (Web):** Portal untuk staf operasional dan manajemen PO Bus.
+2.  **BusKet Mobile (App):** Antarmuka pengguna akhir (penumpang) untuk Android/iOS.
+3.  **BusKet API (Backend):** Server pusat yang menghubungkan kedua antarmuka di atas.
 
 ---
 
 ## Fitur Utama
 
-### 1. Multi-Account Product Management
-Sistem penyimpanan data yang aman memisahkan katalog produk berdasarkan akun pengguna.
-* **Isolasi Database:** Memastikan data stok dan harga satu pengguna tidak tercampur dengan pengguna lain.
-* **CRUD Produk:** Menambah, mengubah, dan menghapus data produk dengan antarmuka mobile yang intuitif.
+### 1. Dashboard Admin (Web)
 
-### 2. Dashboard Analitik
-Visualisasi data penjualan secara real-time.
-* **Grafik Penjualan:** Memantau tren pendapatan harian dan bulanan.
-* **Laporan Keuntungan:** Kalkulasi otomatis laba bersih dari setiap transaksi.
+Dirancang untuk administrator, agen, dan manajer operasional.
 
-### 3. Kalkulator Dagang Terintegrasi
-Alat bantu hitung yang disematkan langsung pada menu kasir.
-* **Hitung Cepat:** Melakukan operasi matematika dasar tanpa menutup aplikasi.
-* **Kalkulasi Margin:** Membantu penentuan harga jual ideal berdasarkan modal.
+* **Manajemen Armada:** Menambah, mengedit, dan memantau status fisik bus (aktif, perawatan, rusak) beserta fasilitas yang tersedia.
+* **Manajemen Rute & Jadwal:** Pengaturan rute keberangkatan, rute tujuan, titik penjemputan (pool), dan jam keberangkatan.
+* **Manajemen Tiket:** Memantau penjualan tiket, pembatalan, dan *reschedule* oleh admin.
+* **Visualisasi Kursi:** Pengaturan tata letak kursi (seat layout) berdasarkan tipe bus (Executive, Sleeper, Ekonomi).
+* **Laporan & Analitik:** Laporan pendapatan harian/bulanan, tingkat okupansi penumpang, dan performa rute terlaris.
+* **Verifikasi Tiket:** Fitur untuk memindai atau memvalidasi tiket penumpang saat boarding.
 
-### 4. Generator Invoice Digital
-Pembuatan bukti pembayaran yang profesional.
-* **Format PDF:** Invoice dapat diunduh atau dibagikan langsung ke pelanggan via WhatsApp/Email.
-* **Detail Transaksi:** Mencakup daftar barang, total harga, pajak (opsional), dan identitas toko.
+### 2. Aplikasi Penumpang (Mobile)
 
----
+Dirancang untuk kemudahan pengguna akhir.
 
-## Pengembang
-
-**Nama:** Luki Solihin
-**NIM:** 23552011413
-
----
+* **Pencarian Cerdas:** Mencari bus berdasarkan kota asal, tujuan, dan tanggal keberangkatan.
+* **Filter & Sortir:** Menyaring hasil berdasarkan harga, waktu berangkat, kelas bus, atau fasilitas.
+* **Pemilihan Kursi Real-time:** Memilih kursi yang diinginkan secara visual agar tidak tumpang tindih dengan penumpang lain.
+* **E-Ticket:** Tiket elektronik dengan QR Code untuk boarding tanpa kertas.
+* **Riwayat Perjalanan:** Melihat riwayat pemesanan yang sudah selesai atau yang akan datang.
