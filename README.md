@@ -35,37 +35,12 @@
   - `intl`: Untuk format mata uang Rupiah dan tanggal.
   - `google_fonts`: Tipografi yang bersih dan elegan.
 
----
-
-## 🚀 Instalasi & Persiapan
-
-1. **Clone Repository**
-   ```bash
-   git clone https://github.com/miuki-rgb/project-UAS.git
-   cd project-UAS
-   ```
-
-2. **Install Dependensi**
-   ```bash
-   flutter pub get
-   ```
-
-3. **Konfigurasi API**
-   Buka file `lib/services/api_service.dart` dan sesuaikan `baseUrl` dengan alamat backend Anda:
-   ```dart
-   static String get baseUrl => 'https://alamat-api-anda.com/api';
-   ```
-
-4. **Jalankan Aplikasi**
-   ```bash
-   flutter run
-   ```
 
 ---
 
 ## 📸 Tampilan Aplikasi
 
-Aplikasi ini menggunakan filosofi desain **Less is More**, memastikan pengguna dapat memesan tiket hanya dalam beberapa ketukan layar. Setiap elemen UI telah dioptimalkan untuk responsivitas dan keindahan visual.
+
 
 ---
 
@@ -76,12 +51,6 @@ Aplikasi ini dikembangkan oleh:
 - **NIM**: 23552011413
 - **Kelas**: TIFRP23CNSB
 - **Mata Kuliah**: UAS Pemrograman Web (Mobile Integration)
-
----
-
-## 📄 Lisensi
-
-Project ini berada di bawah lisensi **MIT**.
 
 ---
 <p align="center">
