@@ -54,8 +54,3 @@ Aplikasi ini dikembangkan oleh:
 - **NIM**: 23552011413
 - **Kelas**: TIFRP23CNSB
 - **Mata Kuliah**: UAS Pemrograman Web 2
-
----
-<p align="center">
-  <b>@copyright by 23552011413_Luki Solihin_TIFRP23CNSB_UASWEB!</b>
-</p>
