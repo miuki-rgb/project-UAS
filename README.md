@@ -43,7 +43,10 @@
 ![demo aplikasi](https://github.com/user-attachments/assets/b72e19de-ed4b-4b20-bde4-60621aea3410)
 
 ---
-
+### 📥 Download Aplikasi
+Unduh aplikasi Busket versi terbaru di sini:
+[Download APK v1.0.0](https://github.com/miuki-rgb/project-UAS/releases/tag/v1.0.0)
+---
 ## 👨‍💻 Identitas Pengembang
 
 Aplikasi ini dikembangkan oleh:
