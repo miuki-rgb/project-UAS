@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "com.example.busket_app"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "27.0.12077973" // Menggunakan versi terbaru sesuai permintaan
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

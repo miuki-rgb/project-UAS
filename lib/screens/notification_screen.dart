@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:intl/intl.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../../services/api_service.dart';
 import '../../models/announcement_model.dart';
@@ -26,9 +25,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        title: Text(
+        title: const Text(
           'Notifikasi',
-          style: TextStyle(color: const Color(0xFF003049), fontWeight: FontWeight.bold, fontSize: 24),
+          style: TextStyle(color: Color(0xFF003049), fontWeight: FontWeight.bold, fontSize: 24),
         ),
         centerTitle: false,
       ),

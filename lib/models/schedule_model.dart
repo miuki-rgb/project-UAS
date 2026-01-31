@@ -6,6 +6,7 @@ class Schedule {
   final DateTime arrivalTime;
   final double price;
   final int stockAvailable;
+  final bool isActive;
   final Bus? bus;
   final RouteData? route;
 
@@ -17,6 +18,7 @@ class Schedule {
     required this.arrivalTime,
     required this.price,
     required this.stockAvailable,
+    required this.isActive,
     this.bus,
     this.route,
   });
@@ -29,7 +31,8 @@ class Schedule {
       departureTime: DateTime.parse(json['departure_time']),
       arrivalTime: DateTime.parse(json['arrival_time']),
       price: double.parse(json['price'].toString()),
-      stockAvailable: json['stock_available'],
+      stockAvailable: json['stock_available'] ?? 0,
+      isActive: json['is_active'] == true || json['is_active'] == 1,
       bus: json['bus'] != null ? Bus.fromJson(json['bus']) : null,
       route: json['route'] != null ? RouteData.fromJson(json['route']) : null,
     );
@@ -41,15 +44,23 @@ class Bus {
   final String name;
   final String plateNumber;
   final int capacity;
+  final String? photo;
 
-  Bus({required this.id, required this.name, required this.plateNumber, required this.capacity});
+  Bus({
+    required this.id, 
+    required this.name, 
+    required this.plateNumber, 
+    required this.capacity,
+    this.photo,
+  });
 
   factory Bus.fromJson(Map<String, dynamic> json) {
     return Bus(
       id: json['id'],
-      name: json['name'],
-      plateNumber: json['plate_number'], // Adjust based on actual DB column if different
-      capacity: json['capacity'],
+      name: json['name'] ?? 'Bus',
+      plateNumber: json['plate_number'] ?? '-',
+      capacity: json['capacity'] ?? 0,
+      photo: json['photo'],
     );
   }
 }
@@ -58,16 +69,24 @@ class RouteData {
   final int id;
   final String origin;
   final String destination;
-  final double distance;
+  final String? distanceKm;
+  final int? durationMinutes;
 
-  RouteData({required this.id, required this.origin, required this.destination, required this.distance});
+  RouteData({
+    required this.id, 
+    required this.origin, 
+    required this.destination, 
+    this.distanceKm,
+    this.durationMinutes,
+  });
 
   factory RouteData.fromJson(Map<String, dynamic> json) {
     return RouteData(
       id: json['id'],
-      origin: json['origin'],
-      destination: json['destination'],
-      distance: double.parse((json['distance_km'] ?? json['distance'] ?? 0).toString()),
+      origin: json['origin'] ?? 'Unknown',
+      destination: json['destination'] ?? 'Unknown',
+      distanceKm: json['distance_km']?.toString(),
+      durationMinutes: json['duration_minutes'],
     );
   }
 }

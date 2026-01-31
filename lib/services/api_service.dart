@@ -1,11 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'dart:io';
-import 'package:flutter/foundation.dart';
 
 class ApiService {
   static String get baseUrl {
-    // Gunakan alamat Railway yang sudah online
+    // Menggunakan URL Railway yang sudah online
     return 'https://web-admin-pemesanan-tiket-bis-production.up.railway.app/api';
   }
   
